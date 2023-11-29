@@ -45,7 +45,7 @@ jobs:
     - name: Run tests
       run: |
         cd decide
-        ./manage.py test voting  --keepdb 
+        ./manage.py test  --keepdb
     # - name: Codacy Coverage Reporter
     #   uses: codacy/codacy-coverage-reporter-action@v1
     #   with:
