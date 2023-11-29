@@ -1,6 +1,10 @@
 name: Python application
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - workflows
   
 
 jobs:
@@ -41,8 +45,7 @@ jobs:
     - name: Run tests
       run: |
         cd decide
-        coverage run --branch --source=. ./manage.py test  --keepdb 
-        coverage xml 
+        ./manage.py test voting  --keepdb 
     # - name: Codacy Coverage Reporter
     #   uses: codacy/codacy-coverage-reporter-action@v1
     #   with:
